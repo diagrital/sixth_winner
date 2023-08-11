@@ -58,10 +58,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # buttons
 # CSS and HTML to center-align the buttons, Giphy image, and customize their appearance
 centered_content = """
-import streamlit as st
-
-# HTML and JavaScript for the centered layout with buttons
-centered_content = """
 <style>
 .center {
     display: flex;
