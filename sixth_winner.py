@@ -99,7 +99,9 @@ centered_content = """
     <div class="button-container">
         <button id="back-button">Back</button>
         <button id="next-button">Next</button>
-        <button id="redirect-button">Redirect</button>
+        <a href="https://www.example.com" target="_blank" class="center button">
+            Redirect
+        </a>
     </div>
 </div>
 
@@ -116,7 +118,6 @@ centered_content = """
     const giphyImage = document.getElementById("giphy-image");
     const backButton = document.getElementById("back-button");
     const nextButton = document.getElementById("next-button");
-    const redirectButton = document.getElementById("redirect-button");
     let currentIndex = 0;
 
     // Function to update the image
@@ -135,16 +136,9 @@ centered_content = """
         updateImage();
     });
 
-    // Redirect button behavior
-    redirectButton.addEventListener("click", () => {
-        window.open("https://www.example.com", "_blank");
-    });
-
     // Initial image update
     updateImage();
 </script>
 """
 
 st.markdown(centered_content, unsafe_allow_html=True)
-
-
