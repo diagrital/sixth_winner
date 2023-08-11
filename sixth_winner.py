@@ -95,3 +95,60 @@ st.markdown(centered_button, unsafe_allow_html=True)
 
 
 #-----------------------------------------------------------------------------------------
+# buttons
+# CSS and HTML to center-align the buttons, Giphy image, and customize their appearance
+centered_content = """
+<style>
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh; /* Adjust this value to control vertical alignment */
+}
+
+.center .giphy-container {
+    margin-bottom: 20px; /* Add spacing between Giphy and buttons */
+}
+
+.center .button-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to a new line if needed */
+    justify-content: center;
+}
+
+.center button {
+    width: 80px; /* Adjust the width to make the button larger */
+    height: 40px; /* Adjust the height to make the button larger */
+    border-radius: 40%; /* Make the button circular */
+    background-color: #007BFF; /* Set the background color */
+    color: white; /* Set the text color */
+    font-size: 16px; /* Adjust the font size */
+    cursor: pointer;
+    margin: 10px; /* Add spacing between buttons */
+}
+
+.center img {
+    max-width: 300px; /* Customize the size of the Giphy image */
+}
+</style>
+
+<div class="center">
+    <div class="giphy-container">
+        <img src="https://media1.giphy.com/media/VRhsYYBw8AE36/200w.webp?cid=ecf05e47qw7a3jba6noh19nnderc28uoprhou5n587x24iy2&ep=v1_gifs_search&rid=200w.webp&ct=g" alt="Giphy Image">
+    </div>
+    <div class="button-container">
+        <a href="https://grandprizewinners-6uye2ujttyngreyi2hznbh.streamlit.app/" target="_blank"><button>Button 1</button></a>
+        <a href="https://www.link2.com" target="_blank"><button>Button 2</button></a>
+        <a href="https://www.link3.com" target="_blank"><button>Button 3</button></a>
+    </div>
+    <div class="button-container">
+        <a href="https://www.link4.com" target="_blank"><button>Button 4</button></a>
+        <a href="https://www.link5.com" target="_blank"><button>Button 5</button></a>
+        <a href="https://www.link6.com" target="_blank"><button>Button 6</button></a>
+    </div>
+</div>
+"""
+
+st.markdown(centered_content, unsafe_allow_html=True)
