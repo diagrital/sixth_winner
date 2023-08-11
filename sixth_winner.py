@@ -55,88 +55,31 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 #-----------------------------------------------------------------------------------------
-centered_content = """
-<style>
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 120vh;
-}
+# Define the list of image URLs
+images = [
+    "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+    "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1",
+    "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+    "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+    "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+    "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1"
+]
 
-.center .giphy-container {
-    margin-bottom: 20px;
-}
+# Define the Streamlit app
+def main():
+    st.title("Giphy Image Viewer")
 
-.center .button-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    # Display the current image based on the selected index
+    current_index = st.slider("Select Image", 0, len(images) - 1, 0)
+    st.image(images[current_index], caption="Giphy Image", use_container_width=True)
 
-.center button {
-    width: 80px;
-    height: 40px;
-    border-radius: 40%;
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px;
-}
+    # Display numbered buttons for each image
+    col1, col2 = st.beta_columns(2)
+    for i, img_url in enumerate(images):
+        if i == current_index:
+            with col1 if i % 2 == 0 else col2:
+                st.image(img_url, caption=f"Image {i + 1}", use_container_width=True)
 
-.center img {
-    max-width: 600px;
-}
-</style>
-
-<div class="center">
-    <div class="giphy-container">
-        <img id="giphy-image" src="https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1" alt="Giphy Image">
-    </div>
-    <div class="button-container">
-        <button id="back-button">Back</button>
-        <button id="next-button">Next</button>
-    </div>
-</div>
-
-<script>
-    const images = [
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
-        "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1",
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1"
-    ];
-
-    const giphyImage = document.getElementById("giphy-image");
-    const backButton = document.getElementById("back-button");
-    const nextButton = document.getElementById("next-button");
-    let currentIndex = 0;
-
-    // Function to update the image
-    function updateImage() {
-        giphyImage.src = images[currentIndex];
-    }
-
-    // Event listeners for the buttons
-    backButton.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateImage();
-    });
-
-    nextButton.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateImage();
-    });
-
-    // Initial image update
-    updateImage();
-</script>
-"""
-
-st.markdown(centered_content, unsafe_allow_html=True)
+if __name__ == "__main__":
+    main()
 
