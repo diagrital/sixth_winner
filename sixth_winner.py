@@ -64,7 +64,7 @@ centered_content = """
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 50vh;
 }
 
 .center .giphy-container {
