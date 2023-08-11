@@ -58,6 +58,10 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # buttons
 # CSS and HTML to center-align the buttons, Giphy image, and customize their appearance
 centered_content = """
+import streamlit as st
+
+# HTML and JavaScript for the centered layout with buttons
+centered_content = """
 <style>
 .center {
     display: flex;
@@ -96,19 +100,46 @@ centered_content = """
 
 <div class="center">
     <div class="giphy-container">
-        <img src="https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1" alt="Giphy Image">
+        <img id="giphy-image" src="https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1" alt="Giphy Image">
     </div>
     <div class="button-container">
-        <a href="https://grandprizewinners-6uye2ujttyngreyi2hznbh.streamlit.app/" target="_blank"><button>Button 1</button></a>
-        <a href="https://www.link2.com" target="_blank"><button>Button 2</button></a>
-        <a href="https://www.link3.com" target="_blank"><button>Button 3</button></a>
-    </div>
-    <div class="button-container">
-        <a href="https://www.link4.com" target="_blank"><button>Button 4</button></a>
-        <a href="https://www.link5.com" target="_blank"><button>Button 5</button></a>
-        <a href="https://www.link6.com" target="_blank"><button>Button 6</button></a>
+        <button id="back-button">Back</button>
+        <button id="next-button">Next</button>
     </div>
 </div>
+
+<script>
+    const images = [
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Giphy image
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 2
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 3
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 4
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 5
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1"  // Image for Button 6
+    ];
+
+    const giphyImage = document.getElementById("giphy-image");
+    const backButton = document.getElementById("back-button");
+    const nextButton = document.getElementById("next-button");
+    let currentIndex = 0;
+
+    // Function to update the image
+    function updateImage() {
+        giphyImage.src = images[currentIndex];
+    }
+
+    // Event listeners for the buttons
+    backButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+</script>
 """
 
 st.markdown(centered_content, unsafe_allow_html=True)
+
