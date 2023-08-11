@@ -99,7 +99,7 @@ centered_content = """
     <div class="button-container">
         <button id="back-button">Back</button>
         <button id="next-button">Next</button>
-        <button id="redirect-button">Home Page</button>
+        <button id="redirect-button">Home</button>
     </div>
 </div>
 
