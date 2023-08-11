@@ -107,7 +107,7 @@ centered_content = """
 <script>
     const images = [
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Giphy image
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 2
+        "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1", // Image for Button 2
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 3
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 4
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 5
