@@ -90,7 +90,7 @@ centered_content = """
 }
 
 .center img {
-    max-width: 300px; /* Customize the size of the Giphy image */
+    max-width: 600px; /* Customize the size of the Giphy image */
 }
 </style>
 
