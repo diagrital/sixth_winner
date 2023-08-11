@@ -96,7 +96,7 @@ centered_content = """
 
 <div class="center">
     <div class="giphy-container">
-        <img src="https://media1.giphy.com/media/VRhsYYBw8AE36/200w.webp?cid=ecf05e47qw7a3jba6noh19nnderc28uoprhou5n587x24iy2&ep=v1_gifs_search&rid=200w.webp&ct=g" alt="Giphy Image">
+        <img src="https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1" alt="Giphy Image">
     </div>
     <div class="button-container">
         <a href="https://grandprizewinners-6uye2ujttyngreyi2hznbh.streamlit.app/" target="_blank"><button>Button 1</button></a>
