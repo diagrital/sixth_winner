@@ -24,7 +24,7 @@ x = " "
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://gcdnb.pbrd.co/images/qi7M8xYRcT10.gif?o=1");
+background-image: url("https://i.ibb.co/j42RRXh/lucky-draw-9-2.gif");
 background-size: 99%;
 background-position: top center;
 background-repeat: non-repeat;
@@ -88,7 +88,7 @@ centered_content = """
 }
 
 .center img {
-    max-width: 600px;
+    max-width: 300px;
 }
 </style>
 
