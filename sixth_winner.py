@@ -55,6 +55,8 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 #-----------------------------------------------------------------------------------------
+import streamlit as st
+
 centered_content = """
 <style>
 .center {
@@ -99,9 +101,7 @@ centered_content = """
     <div class="button-container">
         <button id="back-button">Back</button>
         <button id="next-button">Next</button>
-        <a href="https://www.example.com" target="_blank" class="center button">
-            Redirect
-        </a>
+        <a id="redirect-link" href="https://www.example.com" target="_blank" class="center button">Redirect</a>
     </div>
 </div>
 
@@ -118,6 +118,7 @@ centered_content = """
     const giphyImage = document.getElementById("giphy-image");
     const backButton = document.getElementById("back-button");
     const nextButton = document.getElementById("next-button");
+    const redirectLink = document.getElementById("redirect-link");
     let currentIndex = 0;
 
     // Function to update the image
@@ -134,6 +135,12 @@ centered_content = """
     nextButton.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
+    });
+
+    // Redirect link behavior (open in new tab)
+    redirectLink.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default behavior of the link
+        window.open(redirectLink.getAttribute("href"), "_blank");
     });
 
     // Initial image update
