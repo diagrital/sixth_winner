@@ -24,7 +24,7 @@ x = " "
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.ibb.co/j42RRXh/lucky-draw-9-2.gif");
+background-image: url("https://i.ibb.co/FW1DHwq/lucky-draw-9-1.gif");
 background-size: 99%;
 background-position: top center;
 background-repeat: non-repeat;
