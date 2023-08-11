@@ -55,8 +55,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 #-----------------------------------------------------------------------------------------
-# buttons
-# CSS and HTML to center-align the buttons, Giphy image, and customize their appearance
 centered_content = """
 <style>
 .center {
@@ -64,33 +62,33 @@ centered_content = """
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 120vh; /* Adjust this value to control vertical alignment */
+    height: 120vh;
 }
 
 .center .giphy-container {
-    margin-bottom: 20px; /* Add spacing between Giphy and buttons */
+    margin-bottom: 20px;
 }
 
 .center .button-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow buttons to wrap to a new line if needed */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .center button {
-    width: 80px; /* Adjust the width to make the button larger */
-    height: 40px; /* Adjust the height to make the button larger */
-    border-radius: 40%; /* Make the button circular */
-    background-color: #007BFF; /* Set the background color */
-    color: white; /* Set the text color */
-    font-size: 16px; /* Adjust the font size */
+    width: 80px;
+    height: 40px;
+    border-radius: 40%;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    margin: 10px; /* Add spacing between buttons */
+    margin: 10px;
 }
 
 .center img {
-    max-width: 600px; /* Customize the size of the Giphy image */
+    max-width: 600px;
 }
 </style>
 
@@ -106,12 +104,12 @@ centered_content = """
 
 <script>
     const images = [
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Giphy image
-        "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1", // Image for Button 2
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 3
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 4
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1", // Image for Button 5
-        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1"  // Image for Button 6
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+        "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1",
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1"
     ];
 
     const giphyImage = document.getElementById("giphy-image");
@@ -134,6 +132,9 @@ centered_content = """
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
     });
+
+    // Initial image update
+    updateImage();
 </script>
 """
 
