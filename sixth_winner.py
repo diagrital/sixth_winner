@@ -99,13 +99,14 @@ centered_content = """
     <div class="button-container">
         <button id="back-button">Back</button>
         <button id="next-button">Next</button>
+        <button id="redirect-button">Redirect</button>
     </div>
 </div>
 
 <script>
     const images = [
-        "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
+        "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
+        "https://gcdnb.pbrd.co/images/g4rsoDUZqbEn.gif?o=1",
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
         "https://gcdnb.pbrd.co/images/kxWgiWDfzsUS.jpg?o=1",
@@ -115,6 +116,7 @@ centered_content = """
     const giphyImage = document.getElementById("giphy-image");
     const backButton = document.getElementById("back-button");
     const nextButton = document.getElementById("next-button");
+    const redirectButton = document.getElementById("redirect-button");
     let currentIndex = 0;
 
     // Function to update the image
@@ -133,10 +135,16 @@ centered_content = """
         updateImage();
     });
 
+    // Redirect button behavior
+    redirectButton.addEventListener("click", () => {
+        window.open("https://www.example.com", "_blank");
+    });
+
     // Initial image update
     updateImage();
 </script>
 """
 
 st.markdown(centered_content, unsafe_allow_html=True)
+
 
